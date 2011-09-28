@@ -1,5 +1,0 @@
-loadstring1.ali
-utest.ali
-../lua.ali
-../lua-lib.ali
-../lua-ext.o

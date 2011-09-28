@@ -1,0 +1,16 @@
+project Lua_Ada is
+   for Library_Name use "lua-ada";
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Library_Dir use "lib";
+   
+   for Languages use ("Ada", "C");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-O2", "-g", "-fstack-check", "-gnatwadleG", "-gnatVa", "-gnato", "-gnata", "-gnatW8", "-gnatiw");
+   end Compiler;
+
+   package Linker is
+      for Linker_Options use ("-llua");
+   end Linker; 
+end Lua_Ada;

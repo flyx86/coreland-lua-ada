@@ -1,4 +1,0 @@
-sd-dlopen           = "dlopen" ;
-sd-dlfunc           = "dlfunc" ;
-sd-dlopen-libs-spec = "sd-dlopen-libs:" , implementation-defined ;
-sd-dlopen-spec      = "sd-dlopen:" , [ sd-dlopen ] , [ sd-dlfunc ] ;
