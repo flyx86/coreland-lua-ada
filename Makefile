@@ -6,14 +6,14 @@ DESTDIR ?=
 GNATFLAGS ?=
 ADA_PROJECT_DIR ?= ${PREFIX}/lib/gnat
 GPRBUILD = gprbuild ${GNATFLAGS} -p
-
+CFLAGS ?=
 
 PROJECT_NAME = lua_ada
 
 compile:
 	mkdir -p lib
 	mkdir -p obj
-	${GPRBUILD} -P ${PROJECT_NAME}.gpr
+	${GPRBUILD} -P ${PROJECT_NAME}.gpr -cargs $(CFLAGS)
 
 tests: compile
 	mkdir -p bin
